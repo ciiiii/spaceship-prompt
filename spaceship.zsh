@@ -41,11 +41,15 @@ fi
 if [ -z "$SPACESHIP_PROMPT_ORDER" ]; then
   SPACESHIP_PROMPT_ORDER=(
     time          # Time stampts section
-    user          # Username section
+    # user          # Username section
     dir           # Current directory section
-    host          # Hostname section
+    # host          # Hostname section
+    venv          # virtualenv section
+    pyenv         # Pyenv section
+    line_sep
     git           # Git section (git_branch + git_status)
-    hg            # Mercurial section (hg_branch  + hg_status)
+    git_user
+    # hg            # Mercurial section (hg_branch  + hg_status)
     # package       # Package version
     # node          # Node.js section
     # ruby          # Ruby section
@@ -58,20 +62,17 @@ if [ -z "$SPACESHIP_PROMPT_ORDER" ]; then
     # rust          # Rust section
     # haskell       # Haskell Stack section
     # julia         # Julia section
-    docker        # Docker section
+    # docker        # Docker section
     # aws           # Amazon Web Services section
     # gcloud        # Google Cloud Platform section
-    venv          # virtualenv section
     # conda         # conda virtualenv section
-    pyenv         # Pyenv section
     # dotnet        # .NET section
     # ember         # Ember.js section
-    git_user
-    kubectl       # Kubectl context section
+    kubectl        # Kubectl context section
     # terraform     # Terraform workspace section
     exec_time     # Execution time
     line_sep      # Line break
-    battery       # Battery level and status
+    # battery       # Battery level and status
     # vi_mode       # Vi-mode indicator
     # jobs          # Background jobs indicator
     exit_code     # Exit code section
